@@ -1,0 +1,26 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+jobs:
+  build:
+    name: Autograding
+    #runs-on: self-hosted
+    runs-on: ubuntu-latest
+    container: simbricks/simbricks
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and Test Subtask 1
+        run: make -C subtask1 test
+      - name: Build and Test Subtask 2
+        run: make -C subtask2 test
+      - name: Build and Test Subtask 3
+        run: make -C subtask3 test
+      - name: Sum up points
+        id: grading
+        run: python .github/total_points.py
+      - uses: markpatterson27/autograding@dev-points-input-release
+        with:
+          points: ${{ steps.grading.outputs.points }}
+          available-points: ${{ steps.grading.outputs.max-points }}
+
