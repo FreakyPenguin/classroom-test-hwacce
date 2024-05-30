@@ -5,8 +5,8 @@ on: [push]
 jobs:
   build:
     name: Autograding
-    #runs-on: self-hosted
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    #runs-on: ubuntu-latest
     container: simbricks/simbricks
     steps:
       - uses: actions/checkout@v2
