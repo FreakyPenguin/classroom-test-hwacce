@@ -1,6 +1,6 @@
 import os
 
-def test_success(zf, name):
+def test_success(name):
     with open(name, 'r') as f:
         ls = f.read().decode('utf-8').strip().split('\n')
     return ls[-1].startswith('SUCCESS')
@@ -14,25 +14,6 @@ def score_subtask(st, point_map):
             points += point_map[k]
         total += point_map[k]
     return (points, total)
-
-def score_subtask2(zf):
-    point_map = {0: 1, 1: 1, 2: 2, 3: 2, 4: 2, 5: 2}
-    points = 0
-    for k in point_map.keys():
-        if test_success(f'subtask2/test{k}.out'):
-            points += point_map[k]
-        total += point_map[k]
-    return points
-
-def score_subtask3():
-    point_map = {0: 5, 1: 5}
-    points = 0
-    total = 0
-    for k in point_map.keys():
-        if test_success(f'subtask3/test{k}.out'):
-            points += point_map[k]
-        total += point_map[k]
-    return points
 
 (p_1, max_1) = score_subtask('subtask1', {0: 1, 1: 3, 2: 1, 3: 3, 4: 2})
 (p_2, max_2) = score_subtask('subtask2', {0: 1, 1: 1, 2: 2, 3: 2, 4: 2, 5: 2})
