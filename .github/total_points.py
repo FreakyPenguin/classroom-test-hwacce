@@ -26,4 +26,4 @@ m = max_1 + max_2 + max_3
 of = os.environ['GITHUB_OUTPUT']
 with open(of, 'a') as f:
     print(f'points={points}', file=f)
-    print(f'max_points={b}', file=f)
+    print(f'max_points={m}', file=f)
