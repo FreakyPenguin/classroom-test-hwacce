@@ -5,9 +5,11 @@ on: [push]
 jobs:
   build:
     name: Autograding
-    runs-on: self-hosted
-    #runs-on: ubuntu-latest
-    container: simbricks/simbricks
+    #runs-on: self-hosted
+    runs-on: ubuntu-latest
+    container:
+      image: simbricks/simbricks
+      options: --device /dev/kvm
     steps:
       - uses: actions/checkout@v2
       - name: Build and Test Subtask 1
