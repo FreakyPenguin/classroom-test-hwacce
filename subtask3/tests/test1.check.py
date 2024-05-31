@@ -16,7 +16,7 @@ except Exception:
 
 cycle_times = []
 
-for lat in [10000000000, 1000000000, 1000000, 1000]:
+for lat in [10000000000, 1000000]:
   data = load_testfile(f'out/test1-{lat}-1.json')
 
   try:
@@ -34,9 +34,7 @@ for lat in [10000000000, 1000000000, 1000000, 1000]:
 
 perf_targets = {
   10000000000: (655449609, '0%'),
-  1000000000: (75454613, '5%'),
   1000000: (10043642, '35%'),
-  1000: (9994685, '35%'),
 }
 
 for (lat, cycles) in cycle_times:

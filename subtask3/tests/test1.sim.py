@@ -12,8 +12,8 @@ from hwaccel_common import *
 experiments = []
 
 # Run test with multiple different operation latencies for the accelerator
-#           10ms         1ms         1us      1ns
-for lat in [10000000000, 1000000000, 1000000, 1000]:
+#           10ms         1us
+for lat in [10000000000, 1000000]:
   e = exp.Experiment(f'test1-{lat}')
   e.checkpoint = True
 

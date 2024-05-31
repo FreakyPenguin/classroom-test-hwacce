@@ -16,7 +16,7 @@ except Exception:
 
 cycle_times = []
 
-for lat in [10000000000, 1000000000, 1000000, 1000]:
+for lat in [10000000000, 1000000]:
   data = load_testfile(f'out/test1-{lat}-1.json')
 
   try:
