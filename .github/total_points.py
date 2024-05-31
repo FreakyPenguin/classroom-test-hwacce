@@ -2,7 +2,7 @@ import os
 
 def test_success(name):
     with open(name, 'r') as f:
-        ls = f.read().decode('utf-8').strip().split('\n')
+        ls = f.read().strip().split('\n')
     return ls[-1].startswith('SUCCESS')
 
 def score_subtask(st, point_map):
