@@ -1,4 +1,4 @@
-# Subtask 2: Improved Hardware-Software Interface
+# Sub-task 2: Improved Hardware-Software Interface
 In this second subtask, we will now improve the performance of the
 hardware-software interface to (hopefully) finally beat the software baseline.
 We will use two techniques: reduce the amount of communication needed, and

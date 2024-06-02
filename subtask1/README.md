@@ -1,4 +1,4 @@
-# Subtask 1: Behavioral Model for Basic Accelerator with PIO Interface
+# Sub-task 1: Basic Accelerator with PIO Interface
 In the first subtask we will start to look at hardware acceleration. As a first
 step we will build a simple behavioral simulator for the accelerator, where we
 can plug in different parameters for size and performance to experiment what

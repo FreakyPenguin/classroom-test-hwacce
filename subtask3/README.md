@@ -1,4 +1,4 @@
-# Subtask 3: Asynchronous Hardware-Software Interface
+# Sub-task 3: Asynchronous Hardware-Software Interface
 In this third subtask, we will further improve the performance of the
 hardware-software interface. The key idea is to submit a sequence of
 requests/commands to the hardware asynchronously, and on completion of the
