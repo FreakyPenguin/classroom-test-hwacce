@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: simbricks/simbricks
-      #options: --device /dev/kvm
+      options: --device /dev/kvm
     steps:
       - uses: actions/checkout@v2
         #- name: Prepare /dev/kvm permissions
