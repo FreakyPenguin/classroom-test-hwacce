@@ -22,11 +22,4 @@ jobs:
         run: make -C subtask2 test
       - name: Build and Test Subtask 3
         run: make -C subtask3 test
-      - name: Sum up points
-        id: grading
-        run: python .github/total_points.py
-      - uses: markpatterson27/autograding@dev-points-input-release
-        with:
-          points: ${{ steps.grading.outputs.points }}
-          available-points: ${{ steps.grading.outputs.max-points }}
-
+      - uses: education/autograding@v1
