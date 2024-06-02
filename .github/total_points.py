@@ -6,7 +6,6 @@ def test_success(name):
     return ls[-1].startswith('SUCCESS')
 
 def score_subtask(st, point_map):
-    point_map = {0: 1, 1: 3, 2: 1, 3: 3, 4: 2}
     points = 0
     total = 0
     for k in point_map.keys():
