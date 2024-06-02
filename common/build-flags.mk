@@ -3,7 +3,7 @@ CFLAGS= -Wall -Wextra -Wno-unused-parameter -O3 $(EXTRA_CFLAGS)
 CXXFLAGS= -Wall -Wextra -O3 $(EXTRA_CXXFLAGS)
 LDFLAGS= -L/simbricks/lib $(EXTRA_LDFLAGS)
 
-SIMBRICKS_FLAGS:=
+SIMBRICKS_FLAGS:= --workdir=/tmp
 
 ifeq ($(PARALLEL),y)
   SIMBRICKS_FLAGS += --parallel
