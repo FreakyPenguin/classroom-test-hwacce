@@ -11,8 +11,8 @@ jobs:
       options: --device /dev/kvm
     steps:
       - uses: actions/checkout@v2
-        #- name: Prepare /dev/kvm permissions
-        #  run: sudo chmod 666 /dev/kvm
+      - name: Prepare /dev/kvm permissions
+        run: sudo chmod 666 /dev/kvm
       - name: Prepare raw images
         run: sudo make -C /simbricks convert-images-raw
       - name: Build and Test Subtask 1
