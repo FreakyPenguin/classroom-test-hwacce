@@ -29,4 +29,9 @@ check:
 test: test0.out test1.out test2.out test3.out test4.out test5.out
 	cat $^
 
-.PHONY: all clean check test
+# Used to run all simulations with parallelization respecting core limits
+all-sims: app/matmul-accel accel-sim/sim
+	-simbricks-run --verbose --force $(SIMBRICKS_FLAGS) tests/*.sim.py
+	-for c in tests/*.check.py; do python3 $$c; done
+
+.PHONY: all clean check test all-sims
