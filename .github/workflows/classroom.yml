@@ -5,8 +5,7 @@ on: [push]
 jobs:
   build:
     name: Autograding
-    #runs-on: self-hosted
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       image: simbricks/simbricks
       options: --device /dev/kvm
