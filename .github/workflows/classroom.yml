@@ -16,9 +16,9 @@ jobs:
       - name: Prepare raw images
         run: sudo make -C /simbricks convert-images-raw
       - name: Build and Test Subtask 1
-        run: make -C subtask1 test
+        run: make -C subtask1 all-sims PARALLEL=y
       - name: Build and Test Subtask 2
-        run: make -C subtask2 test
+        run: make -C subtask2 all-sims PARALLEL=y
       - name: Build and Test Subtask 3
-        run: make -C subtask3 test
+        run: make -C subtask3 all-sims PARALLEL=y
       - uses: education/autograding@v1
